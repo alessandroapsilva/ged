@@ -1,0 +1,45 @@
+# Enforce clean URLs and hide /public
+Options -Indexes -MultiViews
+RewriteEngine On
+
+# SMTP ENV (auto-inserido pelo setup) - REMOVA se usar outro método
+SetEnv GED_SMTP_HOST "ged.enfas.com.br"
+SetEnv GED_SMTP_PORT "465"
+SetEnv GED_SMTP_USER "noreply@ged.enfas.com.br"
+SetEnv GED_SMTP_PASS "noreplyged.2018@prodea"
+SetEnv GED_SMTP_SECURE "ssl"
+SetEnv GED_MAIL_FROM "noreply@ged.enfas.com.br"
+SetEnv GED_MAIL_FROM_NAME "ENFAS GED"
+
+# Ajuste o caminho base conforme a pasta (aqui, /ged)
+RewriteBase /ged
+
+# 0) Bloqueia/normaliza acesso direto a /public na URL (apenas quando o cliente pediu /public)
+RewriteCond %{THE_REQUEST} \s/ged/public [NC]
+RewriteRule ^public/?(.*)$ $1 [R=301,L]
+
+# 1) Arquivos estáticos (com extensão) -> servir de /public
+RewriteCond %{REQUEST_URI} !^/ged/public/ [NC]
+RewriteCond %{REQUEST_URI} \.[a-z0-9]{2,6}$ [NC]
+RewriteRule ^(.*)$ public/$1 [L]
+
+# 2) Redireciona URLs com .php para a versão sem extensão (canonical) — apenas GET para não quebrar POST (login, etc.)
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{THE_REQUEST} \s/+ged/([^\s?]+)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 3) Raiz /ged -> public/index.php
+RewriteRule ^$ public/index.php [L]
+
+# 4) Roteia /pasta[/] para public/pasta/index.php quando existir
+RewriteCond %{REQUEST_URI} !^/ged/public/ [NC]
+RewriteCond %{DOCUMENT_ROOT}/ged/public/$1/index.php -f
+RewriteRule ^(.+?)/?$ public/$1/index.php [L]
+
+# 5) Roteia /rota para public/rota.php quando existir
+RewriteCond %{REQUEST_URI} !^/ged/public/ [NC]
+RewriteCond %{DOCUMENT_ROOT}/ged/public/$1.php -f
+RewriteRule ^(.+)$ public/$1.php [L]
+
+# 6) Se nada casou até aqui, 404 amigável (opcional; remova se tiver roteador próprio)
+# ErrorDocument 404 /ged/public/404.html

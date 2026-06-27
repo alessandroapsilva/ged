@@ -1,0 +1,50 @@
+/* brand.css - paleta cinza inspirada no eDok, com alternância opcional via body.theme-gray */
+:root {
+  --brand-primary: #6b7280; /* gray-500 */
+  --brand-primary-600: #4b5563; /* gray-600 */
+  --brand-primary-700: #374151; /* gray-700 */
+  --brand-accent: #9ca3af; /* gray-400 */
+  --brand-border: #e5e7eb; /* gray-200 */
+  --brand-bg-soft: #f3f4f6; /* gray-100 */
+}
+
+/* Ajustes gerais sutis (mantém AdminLTE como base) */
+.navbar .nav-link { transition: color .15s ease, background-color .15s ease; }
+.dropdown-menu { border-radius: 8px; }
+.btn { border-radius: 6px; }
+
+/* Paleta cinza como padrão (sem depender do modo) */
+.badge.badge-primary { background-color: var(--brand-primary); }
+.btn-primary { background-color: var(--brand-primary); border-color: var(--brand-primary); }
+.btn-primary:hover { background-color: var(--brand-primary-600); border-color: var(--brand-primary-600); }
+.btn-outline-primary { color: var(--brand-primary); border-color: var(--brand-primary); }
+.btn-outline-primary:hover { background-color: var(--brand-primary); color: #fff; }
+.page-item.active .page-link { background-color: var(--brand-primary); border-color: var(--brand-primary); }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link { background-color: var(--brand-primary); }
+
+/* Modo cinza: aplica apenas nas telas/módulos (content-wrapper e seus elementos) */
+body.theme-gray .content-wrapper { background-color: var(--brand-bg-soft); }
+body.theme-gray .content-wrapper .card { background: #fff; border-color: var(--brand-border); }
+body.theme-gray .content-wrapper .card .card-header { background: #fafafa; border-bottom-color: var(--brand-border); }
+body.theme-gray .content-wrapper .table thead th { background: #f8f9fa; border-bottom-color: var(--brand-border); }
+body.theme-gray .content-wrapper .table tbody td { border-top-color: var(--brand-border); }
+body.theme-gray .content-wrapper .form-control { border-color: var(--brand-border); }
+body.theme-gray .content-wrapper .page-item.active .page-link { background-color: var(--brand-primary); border-color: var(--brand-primary); }
+body.theme-gray .content-wrapper a { color: var(--brand-primary-600); }
+body.theme-gray .content-wrapper a:hover { color: var(--brand-primary-700); }
+body.theme-gray .content-wrapper .badge-primary { background-color: var(--brand-primary); }
+body.theme-gray .content-wrapper .btn-primary { background-color: var(--brand-primary); border-color: var(--brand-primary); }
+body.theme-gray .content-wrapper .btn-primary:hover { background-color: var(--brand-primary-600); border-color: var(--brand-primary-600); }
+body.theme-gray .content-wrapper .btn-link { color: var(--brand-primary-600); }
+body.theme-gray .content-wrapper .btn-link:hover { color: var(--brand-primary-700); }
+
+/* Estados focados mais visíveis e neutros */
+body.theme-gray .content-wrapper .form-control:focus, 
+body.theme-gray .content-wrapper .custom-select:focus { box-shadow: 0 0 0 .2rem rgba(107,114,128,.25); border-color: var(--brand-primary); }
+
+/* Dropdowns, modais e afins dentro do conteúdo */
+body.theme-gray .content-wrapper .dropdown-menu { border-color: var(--brand-border); }
+body.theme-gray .content-wrapper .modal-content { border-color: var(--brand-border); }
+
+/* Indicativo visual no ícone da lâmpada quando ativo */
+body.theme-gray #theme-switch { color: #f59e0b; /* amber-500 */ }

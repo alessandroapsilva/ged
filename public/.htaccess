@@ -1,0 +1,64 @@
+﻿# .htaccess para produção (Apache)
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html
+  AddCharset UTF-8 .css
+  AddCharset UTF-8 .js
+  AddCharset UTF-8 .php
+</IfModule>
+
+# Segurança básica
+ServerSignature Off
+Header always unset X-Powered-By
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+# HSTS (somente se HTTPS)
+<If "%{HTTPS} = 'on'">
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</If>
+
+# Cache e compressÃ£o de assets
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+</IfModule>
+
+# Bloquear acesso direto a pastas sensÃ­veis
+RedirectMatch 403 ^/(config|core|helpers|vendor|tests|scripts)/?.*$
+
+# Roteamento opcional (se necessÃ¡rio), manter arquivos existentes
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.php [L]
+
+# Laravel como principal em /ged
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Manter arquivos e pastas reais do GED
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2) Permitir acesso a arquivos .php sem extensão
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.*)$ $1.php [L]
+
+  # 3) Tudo mais vai para o front controller do Laravel.
+  #    Tenta primeiro dentro do próprio /ged (./laravel/public/index.php),
+  #    e se não existir ainda, usa o caminho externo ../ged-laravel/public/index.php
+  RewriteCond %{DOCUMENT_ROOT}/laravel/public/index.php -f
+  RewriteRule ^ laravel/public/index.php [L,QSA]
+</IfModule>

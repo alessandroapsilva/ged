@@ -1,0 +1,15 @@
+
+[
+    {
+        "username": "ana.silva",
+        "password_hash": "$2y$10$E/gO3.b5pGSOjA.1n1hD..yY6V./A5uG1dGfH6JzJ3.g1.N/wzD1a",
+        "name": "Ana Silva",
+        "role": "Analista"
+    },
+    {
+        "username": "joao.souza",
+        "password_hash": "$2y$10$gL/h3c5aT3s3a.5n5fG/..zX7V./B6uH2eGgI7KzK4.h2.O/x{E2b",
+        "name": "João Souza",
+        "role": "Diretor"
+    }
+]

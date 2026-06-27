@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Modernizados - Preview</title>
+    <link rel="stylesheet" href="/ged/style.css">
+    <link rel="stylesheet" href="/ged/public/css/components.css">
+    <link rel="stylesheet" href="/ged/public/css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .demo-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-item {
+            padding: 1rem;
+            background: var(--gray-50);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #d1fae5;
+            color: #065f46;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1 style="color: var(--primary-color); text-align: center; margin-bottom: 0.5rem;">
+            <i class="fas fa-palette"></i> Preview - Design Modernizado
+        </h1>
+        <p style="text-align: center; color: var(--gray-600); margin-bottom: 3rem;">
+            Demonstração de todos os componentes visuais implementados
+        </p>
+
+        <!-- Botões -->
+        <div class="demo-section">
+            <h2><i class="fas fa-mouse"></i> Botões</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <button class="button">Primary</button>
+                </div>
+                <div class="demo-item">
+                    <button class="button-secondary">Secondary</button>
+                </div>
+                <div class="demo-item">
+                    <button class="button-success">Success</button>
+                </div>
+                <div class="demo-item">
+                    <button class="button-danger">Danger</button>
+                </div>
+                <div class="demo-item">
+                    <button class="button-outline">Outline</button>
+                </div>
+                <div class="demo-item">
+                    <button class="button" disabled>Disabled</button>
+                </div>
+            </div>
+            <div class="code-block">
+&lt;button class="button"&gt;Primary&lt;/button&gt;
+&lt;button class="button-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="button-success"&gt;Success&lt;/button&gt;
+&lt;button class="button-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="button-outline"&gt;Outline&lt;/button&gt;
+            </div>
+        </div>
+
+        <!-- Alertas -->
+        <div class="demo-section">
+            <h2><i class="fas fa-bell"></i> Alertas</h2>
+            <div class="alert alert-success" style="margin-bottom: 1rem;">
+                <i class="fas fa-check-circle"></i> Operação realizada com sucesso!
+            </div>
+            <div class="alert alert-error" style="margin-bottom: 1rem;">
+                <i class="fas fa-exclamation-circle"></i> Ocorreu um erro ao processar a requisição.
+            </div>
+            <div class="alert alert-warning" style="margin-bottom: 1rem;">
+                <i class="fas fa-exclamation-triangle"></i> Aviso: Esta ação não pode ser desfeita.
+            </div>
+            <div class="alert alert-info" style="margin-bottom: 1rem;">
+                <i class="fas fa-info-circle"></i> Informação: Seu arquivo foi atualizado.
+            </div>
+            <div class="code-block">
+&lt;div class="alert alert-success"&gt;Sucesso!&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;Erro!&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Aviso!&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;Info!&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="demo-section">
+            <h2><i class="fas fa-tag"></i> Badges</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-secondary">Secondary</span>
+                <span class="badge badge-success">Success</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-danger">Danger</span>
+                <span class="badge badge-info">Info</span>
+            </div>
+            <div class="code-block">
+&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="demo-section">
+            <h2><i class="fas fa-check"></i> Status</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <span class="status status-protocolado">Protocolado</span>
+                <span class="status status-revisao">Revisão</span>
+                <span class="status status-aguardando">Aguardando</span>
+                <span class="status status-analise">Análise</span>
+                <span class="status status-aprovado">Aprovado</span>
+                <span class="status status-reprovado">Reprovado</span>
+                <span class="status status-arquivado">Arquivado</span>
+            </div>
+            <div class="code-block">
+&lt;span class="status status-aprovado"&gt;Aprovado&lt;/span&gt;
+&lt;span class="status status-reprovado"&gt;Reprovado&lt;/span&gt;
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="demo-section">
+            <h2><i class="fas fa-square"></i> Cards</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Título do Card</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Este é o conteúdo do card. Pode conter qualquer tipo de conteúdo HTML.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="button">Ação</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-line"></i> Estatísticas</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Total:</strong> 1.234 documentos</p>
+                        <p><strong>Hoje:</strong> 45 novos</p>
+                        <p><strong>Taxa:</strong> ↑ 12%</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-info-circle"></i> Informações</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Sistema totalmente responsivo e otimizado para mobile.</p>
+                        <p>Dark mode automático com theme toggle.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block">
+&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;&lt;h3&gt;Título&lt;/h3&gt;&lt;/div&gt;
+    &lt;div class="card-body"&gt;Conteúdo&lt;/div&gt;
+    &lt;div class="card-footer"&gt;&lt;button&gt;Ação&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="demo-section">
+            <h2><i class="fas fa-dashboard"></i> Stat Cards (Dashboard)</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <div class="stat-card-label">Documentos</div>
+                        <div class="stat-card-number">1.234</div>
+                        <div class="stat-card-footer">
+                            <i class="fas fa-arrow-up"></i> Total no sistema
+                        </div>
+                    </div>
+                    <div class="stat-card-icon"><i class="fas fa-file-alt"></i></div>
+                </div>
+
+                <div class="stat-card warning">
+                    <div class="stat-card-content">
+                        <div class="stat-card-label">Pendentes</div>
+                        <div class="stat-card-number">89</div>
+                        <div class="stat-card-footer">
+                            <i class="fas fa-clock"></i> Requerem ação
+                        </div>
+                    </div>
+                    <div class="stat-card-icon"><i class="fas fa-hourglass-half"></i></div>
+                </div>
+
+                <div class="stat-card urgent">
+                    <div class="stat-card-content">
+                        <div class="stat-card-label">Urgentes</div>
+                        <div class="stat-card-number">12</div>
+                        <div class="stat-card-footer">
+                            <i class="fas fa-fire"></i> Atenção imediata
+                        </div>
+                    </div>
+                    <div class="stat-card-icon"><i class="fas fa-exclamation"></i></div>
+                </div>
+            </div>
+            <div class="code-block">
+&lt;div class="stat-card"&gt;
+    &lt;div class="stat-card-content"&gt;
+        &lt;div class="stat-card-label"&gt;Label&lt;/div&gt;
+        &lt;div class="stat-card-number"&gt;999&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="stat-card-icon"&gt;&lt;i class="fas fa-icon"&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+
+        <!-- Formulários -->
+        <div class="demo-section">
+            <h2><i class="fas fa-form"></i> Formulários</h2>
+            <form class="form-wrapper">
+                <div class="form-group">
+                    <label for="nome" class="required">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome aqui" value="João Silva">
+                    <span class="form-help">Digite seu nome como aparece em documentos oficiais</span>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" placeholder="seu@email.com" value="joao@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(11) 98765-4321">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria">
+                        <option>Selecione uma categoria</option>
+                        <option selected>Documento Pessoal</option>
+                        <option>Documento Corporativo</option>
+                        <option>Contrato</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" placeholder="Descreva o documento...">Exemplo de descrição</textarea>
+                </div>
+
+                <div class="form-group-checkbox">
+                    <input type="checkbox" id="termos" checked>
+                    <label for="termos">Concordo com os termos de serviço</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="button-secondary">Limpar</button>
+                    <button type="submit" class="button">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tabelas -->
+        <div class="demo-section">
+            <h2><i class="fas fa-table"></i> Tabelas Modernizadas</h2>
+            <div class="table-wrapper">
+                <table class="table-enhanced">
+                    <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Documento">Contrato #001</td>
+                            <td data-label="Tipo">Contrato</td>
+                            <td data-label="Status"><span class="status status-aprovado">Aprovado</span></td>
+                            <td data-label="Data">01/12/2024</td>
+                            <td data-label="Ações">
+                                <div class="table-actions">
+                                    <a href="#" class="table-action-btn">Visualizar</a>
+                                    <a href="#" class="table-action-btn danger">Deletar</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Documento">RG - João Silva</td>
+                            <td data-label="Tipo">Documento Pessoal</td>
+                            <td data-label="Status"><span class="status status-revisao">Revisão</span></td>
+                            <td data-label="Data">02/12/2024</td>
+                            <td data-label="Ações">
+                                <div class="table-actions">
+                                    <a href="#" class="table-action-btn">Editar</a>
+                                    <a href="#" class="table-action-btn">Deletar</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Documento">Fatura #123</td>
+                            <td data-label="Tipo">Fatura</td>
+                            <td data-label="Status"><span class="status status-protocolado">Protocolado</span></td>
+                            <td data-label="Data">03/12/2024</td>
+                            <td data-label="Ações">
+                                <div class="table-actions">
+                                    <a href="#" class="table-action-btn">Assinar</a>
+                                    <a href="#" class="table-action-btn danger">Deletar</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Componentes Especiais -->
+        <div class="demo-section">
+            <h2><i class="fas fa-star"></i> Componentes Especiais</h2>
+            
+            <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Breadcrumb</h3>
+            <div class="breadcrumb">
+                <div class="breadcrumb-item"><a href="#">Home</a></div>
+                <div class="breadcrumb-separator">/</div>
+                <div class="breadcrumb-item"><a href="#">Documentos</a></div>
+                <div class="breadcrumb-separator">/</div>
+                <div class="breadcrumb-item active">Contrato #001</div>
+            </div>
+
+            <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Empty State</h3>
+            <div class="empty-state">
+                <div class="empty-state-icon">📂</div>
+                <h4 class="empty-state-title">Nenhum Documento</h4>
+                <p class="empty-state-description">Não há documentos nesta pasta. Crie um novo documento para começar.</p>
+                <div class="empty-state-actions">
+                    <button class="button">Novo Documento</button>
+                    <button class="button-secondary">Fazer Upload</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Final -->
+        <div class="demo-section" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; text-align: center;">
+            <h2 style="color: white; border-bottom-color: rgba(255, 255, 255, 0.3);">
+                <i class="fas fa-check-circle"></i> Sistema Pronto para Produção
+            </h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; margin: 1rem 0;">
+                Todos os componentes foram testados e validados. Seu sistema está TOP como eDok.com.br! 🚀
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.8); margin-top: 1rem;">
+                Para integrar em suas páginas, consulte <strong>GUIA_IMPLEMENTACAO_DESIGN.md</strong>
+            </p>
+        </div>
+    </div>
+
+    <script src="/ged/public/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="docGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f9ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Background -->
+  <rect width="120" height="120" rx="28" fill="url(#bgGradient)"/>
+  
+  <!-- Document Icon -->
+  <g transform="translate(30, 25)">
+    <!-- Main Document -->
+    <path d="M5 0 C5 0 5 0 5 0 L45 0 C48 0 48 0 50 2 L60 12 C62 14 62 14 62 17 L62 60 C62 63 62 65 60 65 L5 65 C2 65 0 63 0 60 L0 5 C0 2 2 0 5 0 Z" 
+          fill="url(#docGradient)" 
+          stroke="#dbeafe" 
+          stroke-width="2"/>
+    
+    <!-- Folded Corner -->
+    <path d="M45 0 L45 10 C45 12 47 12 50 12 L60 12" 
+          fill="none" 
+          stroke="#93c5fd" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    
+    <!-- Document Lines -->
+    <line x1="12" y1="25" x2="50" y2="25" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="35" x2="45" y2="35" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="45" x2="50" y2="45" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+    <line x1="12" y1="55" x2="38" y2="55" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Shield Badge (Security) -->
+  <g transform="translate(75, 70)">
+    <circle cx="15" cy="15" r="18" fill="#10b981" opacity="0.95"/>
+    <path d="M15 5 L20 8 L20 14 C20 18 18 21 15 23 C12 21 10 18 10 14 L10 8 Z" 
+          fill="white"/>
+    <path d="M13 14 L14.5 15.5 L17.5 11.5" 
+          stroke="#10b981" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+  </g>
+</svg>

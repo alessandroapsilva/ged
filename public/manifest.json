@@ -1,0 +1,66 @@
+{
+  "name": "GED - Gestão Eletrônica de Documentos",
+  "short_name": "GED",
+  "description": "Sistema completo de gestão eletrônica de documentos",
+  "start_url": "/ged/painel_produtividade",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/ged/public/assets/dist/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/ged/public/assets/dist/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Adicionar Documento",
+      "short_name": "Novo Doc",
+      "description": "Adicionar novo documento",
+  "url": "/ged/documentos_adicionar",
+      "icons": [
+        {
+          "src": "/ged/public/assets/dist/img/icon-add.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Buscar",
+      "short_name": "Buscar",
+      "description": "Buscar documentos",
+  "url": "/ged/buscar",
+      "icons": [
+        {
+          "src": "/ged/public/assets/dist/img/icon-search.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Ver painel de controle",
+  "url": "/ged/painel_produtividade",
+      "icons": [
+        {
+          "src": "/ged/public/assets/dist/img/icon-dashboard.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

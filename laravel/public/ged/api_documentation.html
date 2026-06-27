@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API - E-Doc</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; background: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #333; }
+        .endpoint { background: #f8f9fa; padding: 15px; margin: 10px 0; border-left: 4px solid #007bff; border-radius: 4px; }
+        .method { font-weight: bold; color: #007bff; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        pre { background: #f8f9fa; padding: 15px; border-radius: 4px; overflow-x: auto; }
+        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 4px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 Documentação da API REST - E-Doc</h1>
+
+        <div class="warning">
+            <strong>⚠️ Importante:</strong> Esta API é para uso interno e requer autenticação via API Key no header <code>X-API-Key</code>.
+        </div>
+
+        <h2>🔑 Autenticação</h2>
+        <p>Envie o header <code>X-API-Key</code> com uma das seguintes chaves:</p>
+        <ul>
+            <li><code>edoc-api-key-2024</code> (produção)</li>
+            <li><code>test-key-123</code> (desenvolvimento)</li>
+        </ul>
+
+        <h2>📋 Endpoints Disponíveis</h2>
+
+        <h3>📄 Documentos</h3>
+
+        <div class="endpoint">
+            <div class="method">GET</div>
+            <strong>/api.php/documents</strong>
+            <p>Listar todos os documentos com filtros opcionais</p>
+            <h4>Parâmetros de Query:</h4>
+            <ul>
+                <li><code>status</code> - Filtrar por status</li>
+                <li><code>search</code> - Busca por título ou conteúdo</li>
+                <li><code>limit</code> - Limite de resultados (padrão: 50)</li>
+            </ul>
+            <h4>Exemplo:</h4>
+            <pre>GET /api.php/documents?status=Aprovado&limit=10
+Headers: X-API-Key: edoc-api-key-2024</pre>
+        </div>
+
+        <div class="endpoint">
+            <div class="method">GET</div>
+            <strong>/api.php/documents/{id}</strong>
+            <p>Obter detalhes de um documento específico</p>
+            <h4>Exemplo:</h4>
+            <pre>GET /api.php/documents/123
+Headers: X-API-Key: edoc-api-key-2024</pre>
+        </div>
+
+        <div class="endpoint">
+            <div class="method">POST</div>
+            <strong>/api.php/documents</strong>
+            <p>Criar um novo documento</p>
+            <h4>Body (JSON):</h4>
+            <pre>{
+  "title": "Novo Documento",
+  "content": "Conteúdo do documento...",
+  "category_id": 1,
+  "priority": "Alta",
+  "deadline": "2024-12-31"
+}</pre>
+            <h4>Exemplo:</h4>
+            <pre>POST /api.php/documents
+Headers: X-API-Key: edoc-api-key-2024
+Content-Type: application/json
+
+{
+  "title": "Contrato de Prestação de Serviços",
+  "content": "Este contrato estabelece...",
+  "priority": "Alta"
+}</pre>
+        </div>
+
+        <div class="endpoint">
+            <div class="method">PUT</div>
+            <strong>/api.php/documents/{id}</strong>
+            <p>Atualizar status de um documento</p>
+            <h4>Body (JSON):</h4>
+            <pre>{
+  "status": "Aprovado"
+}</pre>
+        </div>
+
+        <h3>👥 Usuários</h3>
+
+        <div class="endpoint">
+            <div class="method">GET</div>
+            <strong>/api.php/users</strong>
+            <p>Listar todos os usuários</p>
+        </div>
+
+        <div class="endpoint">
+            <div class="method">GET</div>
+            <strong>/api.php/users/{id}</strong>
+            <p>Obter detalhes de um usuário específico</p>
+        </div>
+
+        <h3>📊 Estatísticas</h3>
+
+        <div class="endpoint">
+            <div class="method">GET</div>
+            <strong>/api.php/stats</strong>
+            <p>Obter estatísticas gerais do sistema</p>
+            <h4>Resposta:</h4>
+            <pre>{
+  "total": 150,
+  "by_status": {
+    "Protocolado": 45,
+    "Em Análise": 32,
+    "Aprovado": 73
+  },
+  "urgent": 12,
+  "overdue": 5,
+  "this_month": 28,
+  "avg_rating": 4.2,
+  "total_ratings": 89
+}</pre>
+        </div>
+
+        <h2>🔧 Exemplos de Integração</h2>
+
+        <h3>JavaScript (Fetch API)</h3>
+        <pre>const apiKey = 'edoc-api-key-2024';
+
+fetch('http://seusite.com/api.php/documents', {
+  headers: {
+    'X-API-Key': apiKey,
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(data => console.log(data));</pre>
+
+        <h3>PHP (cURL)</h3>
+        <pre>$apiKey = 'edoc-api-key-2024';
+$url = 'http://seusite.com/api.php/documents';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'X-API-Key: ' . $apiKey,
+    'Content-Type: application/json'
+]);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$data = json_decode($response, true);</pre>
+
+        <h3>Python (Requests)</h3>
+        <pre>import requests
+
+api_key = 'edoc-api-key-2024'
+url = 'http://seusite.com/api.php/documents'
+
+headers = {
+    'X-API-Key': api_key,
+    'Content-Type': 'application/json'
+}
+
+response = requests.get(url, headers=headers)
+data = response.json()</pre>
+
+        <h2>⚡ Limites e Considerações</h2>
+        <ul>
+            <li><strong>Rate Limiting:</strong> Máximo 1000 requisições por hora por API Key</li>
+            <li><strong>Timeout:</strong> 30 segundos por requisição</li>
+            <li><strong>Formato:</strong> Apenas JSON é suportado</li>
+            <li><strong>CORS:</strong> Habilitado para integração com aplicações web</li>
+            <li><strong>Logs:</strong> Todas as requisições são registradas para auditoria</li>
+        </ul>
+
+        <h2>🚨 Códigos de Erro</h2>
+        <ul>
+            <li><code>200</code> - Sucesso</li>
+            <li><code>400</code> - Dados inválidos</li>
+            <li><code>401</code> - API Key inválida</li>
+            <li><code>404</code> - Recurso não encontrado</li>
+            <li><code>405</code> - Método não permitido</li>
+            <li><code>500</code> - Erro interno do servidor</li>
+        </ul>
+
+        <h2>📞 Suporte</h2>
+        <p>Para dúvidas sobre a integração, entre em contato com a equipe de desenvolvimento.</p>
+    </div>
+</body>
+</html>

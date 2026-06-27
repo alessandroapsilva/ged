@@ -1,0 +1,1922 @@
+[2025-10-31 18:29:09] POST documentos_editar iniciado Array
+(
+    [documento_id] => 35
+    [user_id] => 1
+)
+
+[2025-10-31 18:29:09] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1406
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 18:29:09] FILES[arquivo] recebido Array
+(
+    [name] => comprovante_integridade_28.txt
+    [full_path] => comprovante_integridade_28.txt
+    [type] => text/plain
+    [tmp_name] => C:\xampp\tmp\php9EDD.tmp
+    [error] => 0
+    [size] => 393
+)
+
+[2025-10-31 18:29:09] Tamanho do arquivo Array
+(
+    [bytes] => 393
+)
+
+[2025-10-31 18:29:09] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-10-31 18:29:09] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php9EDD.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69052a25258464.47860660.txt
+)
+
+[2025-10-31 18:29:09] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69052a25258464.47860660.txt
+    [size] => 393
+)
+
+[2025-10-31 18:29:09] Hash/Páginas Array
+(
+    [hash] => e5ad0c46c630173d02c83cb279c51d6ab1d2db6b346b3e834d85af8bf6fa9efd
+    [pages] => 
+)
+
+[2025-10-31 18:30:05] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-10-31 18:30:05] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 72762
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 18:30:05] FILES[arquivo] recebido Array
+(
+    [name] => doc_68ec1c3016a742.55721288_assinado.pdf
+    [full_path] => doc_68ec1c3016a742.55721288_assinado.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php7C1F.tmp
+    [error] => 0
+    [size] => 71755
+)
+
+[2025-10-31 18:30:05] Tamanho do arquivo Array
+(
+    [bytes] => 71755
+)
+
+[2025-10-31 18:30:05] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-10-31 18:30:05] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php7C1F.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69052a5dc43999.38965921.pdf
+)
+
+[2025-10-31 18:30:05] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69052a5dc43999.38965921.pdf
+    [size] => 71755
+)
+
+[2025-10-31 18:30:06] Hash/Páginas Array
+(
+    [hash] => ea3a312cec1917483981f3ea5d2cade6ab8ee8964c9f980f74ca5b65b94e9ca3
+    [pages] => 1
+)
+
+[2025-10-31 19:01:55] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-10-31 19:01:55] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1385
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 19:01:55] FILES[arquivo] recebido Array
+(
+    [name] => comprovante_integridade_28.txt
+    [full_path] => comprovante_integridade_28.txt
+    [type] => text/plain
+    [tmp_name] => C:\xampp\tmp\php9EFD.tmp
+    [error] => 0
+    [size] => 393
+)
+
+[2025-10-31 19:01:55] Tamanho do arquivo Array
+(
+    [bytes] => 393
+)
+
+[2025-10-31 19:01:55] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-10-31 19:01:55] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php9EFD.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690531d33babe4.64465026.txt
+)
+
+[2025-10-31 19:01:55] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690531d33babe4.64465026.txt
+    [size] => 393
+)
+
+[2025-10-31 19:01:55] Hash/Páginas Array
+(
+    [hash] => e5ad0c46c630173d02c83cb279c51d6ab1d2db6b346b3e834d85af8bf6fa9efd
+    [pages] => 
+)
+
+[2025-10-31 19:01:59] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-10-31 19:01:59] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 976
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 19:01:59] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-10-31 19:11:58] POST documentos_editar iniciado Array
+(
+    [documento_id] => 27
+    [user_id] => 1
+)
+
+[2025-10-31 19:11:58] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 3436178
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 19:11:58] FILES[arquivo] recebido Array
+(
+    [name] => PAPEL TIMBRADO - ENFAS.pdf
+    [full_path] => PAPEL TIMBRADO - ENFAS.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php7E2.tmp
+    [error] => 0
+    [size] => 3435191
+)
+
+[2025-10-31 19:11:58] Tamanho do arquivo Array
+(
+    [bytes] => 3435191
+)
+
+[2025-10-31 19:11:58] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-10-31 19:11:58] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php7E2.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6905342e9c86b8.91564062.pdf
+)
+
+[2025-10-31 19:11:59] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6905342e9c86b8.91564062.pdf
+    [size] => 3435191
+)
+
+[2025-10-31 19:12:20] Hash/Páginas Array
+(
+    [hash] => e149324659601fe38fd39c921a2f77eecf51ae008d39a5851bd46f7250aa64f5
+    [pages] => 1
+)
+
+[2025-10-31 19:23:45] POST documentos_editar iniciado Array
+(
+    [documento_id] => 28
+    [user_id] => 1
+)
+
+[2025-10-31 19:23:45] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 990
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-10-31 19:23:45] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-01 11:49:51] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 11:49:51] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 31648
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 11:49:51] FILES[arquivo] recebido Array
+(
+    [name] => 06.10.2025_31.10.2025.pdf
+    [full_path] => 06.10.2025_31.10.2025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpD5A7.tmp
+    [error] => 0
+    [size] => 30656
+)
+
+[2025-11-01 11:49:51] Tamanho do arquivo Array
+(
+    [bytes] => 30656
+)
+
+[2025-11-01 11:49:51] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 11:49:51] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpD5A7.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69061e0ff1b705.06253973.pdf
+)
+
+[2025-11-01 11:49:51] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69061e0ff1b705.06253973.pdf
+    [size] => 30656
+)
+
+[2025-11-01 11:49:57] Hash/Páginas Array
+(
+    [hash] => 8c8c05215229be7335cdefa825fbb0115ed0f7118aa5ad5ee54403d7c6f0615a
+    [pages] => 1
+)
+
+[2025-11-01 12:00:19] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-01 12:00:19] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 31641
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 12:00:19] FILES[arquivo] recebido Array
+(
+    [name] => 06.10.2025_31.10.2025.pdf
+    [full_path] => 06.10.2025_31.10.2025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php6A99.tmp
+    [error] => 0
+    [size] => 30656
+)
+
+[2025-11-01 12:00:19] Tamanho do arquivo Array
+(
+    [bytes] => 30656
+)
+
+[2025-11-01 12:00:19] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 12:00:19] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php6A99.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69062083bf3e70.91697777.pdf
+)
+
+[2025-11-01 12:00:19] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69062083bf3e70.91697777.pdf
+    [size] => 30656
+)
+
+[2025-11-01 12:00:19] Hash/Páginas Array
+(
+    [hash] => 8c8c05215229be7335cdefa825fbb0115ed0f7118aa5ad5ee54403d7c6f0615a
+    [pages] => 1
+)
+
+[2025-11-01 12:00:41] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-01 12:00:41] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 31641
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 12:00:41] FILES[arquivo] recebido Array
+(
+    [name] => 06.10.2025_31.10.2025.pdf
+    [full_path] => 06.10.2025_31.10.2025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpC03C.tmp
+    [error] => 0
+    [size] => 30656
+)
+
+[2025-11-01 12:00:41] Tamanho do arquivo Array
+(
+    [bytes] => 30656
+)
+
+[2025-11-01 12:00:41] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 12:00:41] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpC03C.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69062099aa6ea0.48371417.pdf
+)
+
+[2025-11-01 12:00:41] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69062099aa6ea0.48371417.pdf
+    [size] => 30656
+)
+
+[2025-11-01 12:00:41] Hash/Páginas Array
+(
+    [hash] => 8c8c05215229be7335cdefa825fbb0115ed0f7118aa5ad5ee54403d7c6f0615a
+    [pages] => 1
+)
+
+[2025-11-01 18:02:26] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 18:02:26] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 31648
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:02:26] FILES[arquivo] recebido Array
+(
+    [name] => 06.10.2025_31.10.2025.pdf
+    [full_path] => 06.10.2025_31.10.2025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpEFA0.tmp
+    [error] => 0
+    [size] => 30656
+)
+
+[2025-11-01 18:02:26] Tamanho do arquivo Array
+(
+    [bytes] => 30656
+)
+
+[2025-11-01 18:02:26] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 18:02:26] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpEFA0.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690675623d1a59.95868272.pdf
+)
+
+[2025-11-01 18:02:26] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690675623d1a59.95868272.pdf
+    [size] => 30656
+)
+
+[2025-11-01 18:02:26] Hash/Páginas Array
+(
+    [hash] => 8c8c05215229be7335cdefa825fbb0115ed0f7118aa5ad5ee54403d7c6f0615a
+    [pages] => 1
+)
+
+[2025-11-01 18:02:30] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 18:02:30] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 976
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:02:30] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-01 18:09:46] POST documentos_editar iniciado Array
+(
+    [documento_id] => 23
+    [user_id] => 1
+)
+
+[2025-11-01 18:09:46] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 350311
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:09:46] FILES[arquivo] recebido Array
+(
+    [name] => MODELOS DE DECLARAÇÕES (1).pdf
+    [full_path] => MODELOS DE DECLARAÇÕES (1).pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpA893.tmp
+    [error] => 0
+    [size] => 349323
+)
+
+[2025-11-01 18:09:46] Tamanho do arquivo Array
+(
+    [bytes] => 349323
+)
+
+[2025-11-01 18:09:46] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 18:09:46] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpA893.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906771aecdf99.84615586.pdf
+)
+
+[2025-11-01 18:09:46] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906771aecdf99.84615586.pdf
+    [size] => 349323
+)
+
+[2025-11-01 18:09:49] Hash/Páginas Array
+(
+    [hash] => b5b057475d7f65bca27ba9eafd373fc291696e777727f903c28a6ce5e9ddb4e2
+    [pages] => 11
+)
+
+[2025-11-01 18:18:24] POST documentos_editar iniciado Array
+(
+    [documento_id] => 8
+    [user_id] => 1
+)
+
+[2025-11-01 18:18:24] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 254501
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:18:24] FILES[arquivo] recebido Array
+(
+    [name] => modelo-de-papel-timbrado-para-documentos-oficiais-da-unesp.docx
+    [full_path] => modelo-de-papel-timbrado-para-documentos-oficiais-da-unesp.docx
+    [type] => application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    [tmp_name] => C:\xampp\tmp\php8EDB.tmp
+    [error] => 0
+    [size] => 253222
+)
+
+[2025-11-01 18:18:24] Tamanho do arquivo Array
+(
+    [bytes] => 253222
+)
+
+[2025-11-01 18:18:24] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 18:18:24] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php8EDB.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906792083fc35.83293401.docx
+)
+
+[2025-11-01 18:18:24] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906792083fc35.83293401.docx
+    [size] => 253222
+)
+
+[2025-11-01 18:18:24] Hash/Páginas Array
+(
+    [hash] => a5f226bc0af7b4203e6713b5d8558955c0926b219ffc642950c9e2a3181d90b7
+    [pages] => 
+)
+
+[2025-11-01 18:18:27] POST documentos_editar iniciado Array
+(
+    [documento_id] => 8
+    [user_id] => 1
+)
+
+[2025-11-01 18:18:27] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1169
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:18:27] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-01 18:18:56] POST documentos_editar iniciado Array
+(
+    [documento_id] => 27
+    [user_id] => 1
+)
+
+[2025-11-01 18:18:56] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 254302
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 18:18:56] FILES[arquivo] recebido Array
+(
+    [name] => modelo-de-papel-timbrado-para-documentos-oficiais-da-unesp.docx
+    [full_path] => modelo-de-papel-timbrado-para-documentos-oficiais-da-unesp.docx
+    [type] => application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    [tmp_name] => C:\xampp\tmp\phpBFC.tmp
+    [error] => 0
+    [size] => 253222
+)
+
+[2025-11-01 18:18:56] Tamanho do arquivo Array
+(
+    [bytes] => 253222
+)
+
+[2025-11-01 18:18:56] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 18:18:56] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpBFC.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69067940983481.31572766.docx
+)
+
+[2025-11-01 18:18:56] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69067940983481.31572766.docx
+    [size] => 253222
+)
+
+[2025-11-01 18:18:56] Hash/Páginas Array
+(
+    [hash] => a5f226bc0af7b4203e6713b5d8558955c0926b219ffc642950c9e2a3181d90b7
+    [pages] => 
+)
+
+[2025-11-01 19:05:43] POST documentos_editar iniciado Array
+(
+    [documento_id] => 8
+    [user_id] => 1
+)
+
+[2025-11-01 19:05:43] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 31841
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 19:05:43] FILES[arquivo] recebido Array
+(
+    [name] => 06.10.2025_31.10.2025.pdf
+    [full_path] => 06.10.2025_31.10.2025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpD0DF.tmp
+    [error] => 0
+    [size] => 30656
+)
+
+[2025-11-01 19:05:43] Tamanho do arquivo Array
+(
+    [bytes] => 30656
+)
+
+[2025-11-01 19:05:43] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 19:05:43] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpD0DF.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69068437b942c1.40639063.pdf
+)
+
+[2025-11-01 19:05:43] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69068437b942c1.40639063.pdf
+    [size] => 30656
+)
+
+[2025-11-01 19:05:48] Hash/Páginas Array
+(
+    [hash] => 8c8c05215229be7335cdefa825fbb0115ed0f7118aa5ad5ee54403d7c6f0615a
+    [pages] => 1
+)
+
+[2025-11-01 20:07:02] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 20:07:02] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 72762
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 20:07:02] FILES[arquivo] recebido Array
+(
+    [name] => doc_68ec1c3016a742.55721288_assinado.pdf
+    [full_path] => doc_68ec1c3016a742.55721288_assinado.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpF467.tmp
+    [error] => 0
+    [size] => 71755
+)
+
+[2025-11-01 20:07:02] Tamanho do arquivo Array
+(
+    [bytes] => 71755
+    [nome] => doc_68ec1c3016a742.55721288_assinado.pdf
+)
+
+[2025-11-01 20:07:03] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 20:07:03] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:07:03] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpF467.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906929717a4e0.67899884.pdf
+)
+
+[2025-11-01 20:07:03] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906929717a4e0.67899884.pdf
+    [size] => 71755
+)
+
+[2025-11-01 20:07:03] Hash/Páginas Array
+(
+    [hash] => ea3a312cec1917483981f3ea5d2cade6ab8ee8964c9f980f74ca5b65b94e9ca3
+    [pages] => 1
+)
+
+[2025-11-01 20:07:03] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 20:07:03] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 12
+)
+
+[2025-11-01 20:07:17] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 20:07:17] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 145402
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 20:07:18] FILES[arquivo] recebido Array
+(
+    [name] => ASO_ALESSANDRA_18102025.pdf
+    [full_path] => ASO_ALESSANDRA_18102025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php30F4.tmp
+    [error] => 0
+    [size] => 144408
+)
+
+[2025-11-01 20:07:18] Tamanho do arquivo Array
+(
+    [bytes] => 144408
+    [nome] => ASO_ALESSANDRA_18102025.pdf
+)
+
+[2025-11-01 20:07:18] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 20:07:18] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:07:18] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php30F4.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690692a60874c1.36347083.pdf
+)
+
+[2025-11-01 20:07:18] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690692a60874c1.36347083.pdf
+    [size] => 144408
+)
+
+[2025-11-01 20:07:18] Hash/Páginas Array
+(
+    [hash] => c3fb548f7ecf0d8a47beccf03ee9bd6d3344c42b3cab73dc2f8bf7dda4855a28
+    [pages] => 1
+)
+
+[2025-11-01 20:07:18] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 20:07:18] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 12
+)
+
+[2025-11-01 20:13:04] POST documentos_editar iniciado Array
+(
+    [documento_id] => 23
+    [user_id] => 1
+)
+
+[2025-11-01 20:13:04] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 142641
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 20:13:04] FILES[arquivo] recebido Array
+(
+    [name] => extrato_emprestimo_consignado_completo_111025.pdf
+    [full_path] => extrato_emprestimo_consignado_completo_111025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php79BD.tmp
+    [error] => 0
+    [size] => 141636
+)
+
+[2025-11-01 20:13:04] Tamanho do arquivo Array
+(
+    [bytes] => 141636
+    [nome] => extrato_emprestimo_consignado_completo_111025.pdf
+)
+
+[2025-11-01 20:13:04] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 20:13:04] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:13:04] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php79BD.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69069400592e28.87396518.pdf
+)
+
+[2025-11-01 20:13:04] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_69069400592e28.87396518.pdf
+    [size] => 141636
+)
+
+[2025-11-01 20:13:04] Hash/Páginas Array
+(
+    [hash] => 3ff20122e4fbd928803e7d6ace3b55e3b549cb91ae6ce00d0ca83d30686bfc8c
+    [pages] => 5
+)
+
+[2025-11-01 20:13:04] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 20:13:04] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 23
+)
+
+[2025-11-01 20:18:23] POST documentos_editar iniciado Array
+(
+    [documento_id] => 35
+    [user_id] => 1
+)
+
+[2025-11-01 20:18:23] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 142673
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 20:18:26] FILES[arquivo] recebido Array
+(
+    [name] => extrato_emprestimo_consignado_completo_111025.pdf
+    [full_path] => extrato_emprestimo_consignado_completo_111025.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php5371.tmp
+    [error] => 0
+    [size] => 141636
+)
+
+[2025-11-01 20:18:26] Tamanho do arquivo Array
+(
+    [bytes] => 141636
+    [nome] => extrato_emprestimo_consignado_completo_111025.pdf
+)
+
+[2025-11-01 20:18:27] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 20:18:27] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:18:27] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php5371.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690695438cdd67.80096750.pdf
+)
+
+[2025-11-01 20:18:27] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690695438cdd67.80096750.pdf
+    [size] => 141636
+)
+
+[2025-11-01 20:18:27] Hash/Páginas Array
+(
+    [hash] => 3ff20122e4fbd928803e7d6ace3b55e3b549cb91ae6ce00d0ca83d30686bfc8c
+    [pages] => 5
+)
+
+[2025-11-01 20:18:27] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 20:18:28] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 35
+)
+
+[2025-11-01 20:23:41] POST documentos_adicionar iniciado Array
+(
+    [user_id] => 1
+    [pasta_id] => 11
+)
+
+[2025-11-01 20:23:43] Validação PDF (adicionar) Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [size] => 119467
+    [header] => 255044462d
+)
+
+[2025-11-01 20:23:43] Diretório de destino (adicionar) Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:23:43] Pré-movimento (adicionar) Array
+(
+    [tmp] => C:\xampp\tmp\php3350.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906967f5f5d36.08358083.pdf
+)
+
+[2025-11-01 20:23:43] Arquivo movido com sucesso (adicionar) Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906967f5f5d36.08358083.pdf
+    [size] => 119467
+)
+
+[2025-11-01 20:23:43] Hash/Páginas (adicionar) Array
+(
+    [hash] => 9946872e1f9868746d98c88135d649ee30a7551d7e049fca63767287ce22d204
+    [pages] => 1
+)
+
+[2025-11-01 20:37:48] POST documentos_adicionar iniciado Array
+(
+    [user_id] => 1
+    [pasta_id] => 11
+)
+
+[2025-11-01 20:37:48] Validação PDF (adicionar) Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [size] => 144408
+    [header] => 255044462d
+)
+
+[2025-11-01 20:37:48] Diretório de destino (adicionar) Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 20:37:48] Pré-movimento (adicionar) Array
+(
+    [tmp] => C:\xampp\tmp\php1EEF.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690699cc8f1912.72244887.pdf
+)
+
+[2025-11-01 20:37:48] Arquivo movido com sucesso (adicionar) Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_690699cc8f1912.72244887.pdf
+    [size] => 144408
+)
+
+[2025-11-01 20:37:48] Hash/Páginas (adicionar) Array
+(
+    [hash] => c3fb548f7ecf0d8a47beccf03ee9bd6d3344c42b3cab73dc2f8bf7dda4855a28
+    [pages] => 1
+)
+
+[2025-11-01 20:46:42] POST tipos_salvar iniciado Array
+(
+    [tipo_id] => 3
+    [user_id] => 1
+)
+
+[2025-11-01 20:50:08] POST tipos_salvar iniciado Array
+(
+    [tipo_id] => 3
+    [user_id] => 1
+)
+
+[2025-11-01 21:31:16] POST tipos_salvar iniciado Array
+(
+    [tipo_id] => 3
+    [user_id] => 1
+)
+
+[2025-11-01 21:31:48] POST tipos_salvar iniciado Array
+(
+    [tipo_id] => 3
+    [user_id] => 1
+)
+
+[2025-11-01 21:31:53] POST tipos_salvar iniciado Array
+(
+    [tipo_id] => 3
+    [user_id] => 1
+)
+
+[2025-11-01 21:49:31] POST documentos_editar iniciado Array
+(
+    [documento_id] => 8
+    [user_id] => 1
+)
+
+[2025-11-01 21:49:31] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 145599
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 21:49:34] FILES[arquivo] recebido Array
+(
+    [name] => doc_690692a60874c1.36347083.pdf
+    [full_path] => doc_690692a60874c1.36347083.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\phpC4B9.tmp
+    [error] => 0
+    [size] => 144408
+)
+
+[2025-11-01 21:49:34] Tamanho do arquivo Array
+(
+    [bytes] => 144408
+    [nome] => doc_690692a60874c1.36347083.pdf
+)
+
+[2025-11-01 21:49:37] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 21:49:37] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 21:49:37] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\phpC4B9.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906aaa10321e1.36348967.pdf
+)
+
+[2025-11-01 21:49:37] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906aaa10321e1.36348967.pdf
+    [size] => 144408
+)
+
+[2025-11-01 21:49:38] Hash/Páginas Array
+(
+    [hash] => c3fb548f7ecf0d8a47beccf03ee9bd6d3344c42b3cab73dc2f8bf7dda4855a28
+    [pages] => 1
+)
+
+[2025-11-01 21:49:38] Renomeado automaticamente (substituicao) Array
+(
+    [from] => 2222
+    [to] => 2222-ApxUMAnR
+)
+
+[2025-11-01 21:49:38] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 21:49:38] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 8
+)
+
+[2025-11-01 23:22:32] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-01 23:22:33] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1909
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-01 23:22:34] FILES[arquivo] recebido Array
+(
+    [name] => documento_combinado_2025-10-14_18-18.pdf
+    [full_path] => documento_combinado_2025-10-14_18-18.pdf
+    [type] => application/pdf
+    [tmp_name] => C:\xampp\tmp\php2F02.tmp
+    [error] => 0
+    [size] => 703
+)
+
+[2025-11-01 23:22:34] Tamanho do arquivo Array
+(
+    [bytes] => 703
+    [nome] => documento_combinado_2025-10-14_18-18.pdf
+)
+
+[2025-11-01 23:22:34] Validação PDF Array
+(
+    [ext] => pdf
+    [mime] => application/pdf
+    [header] => 255044462d
+)
+
+[2025-11-01 23:22:34] Diretório de destino Array
+(
+    [dir] => C:\xampp\htdocs\ged/public/storage/uploads
+    [exists] => 1
+    [writable] => 1
+)
+
+[2025-11-01 23:22:34] Pré-movimento Array
+(
+    [tmp] => C:\xampp\tmp\php2F02.tmp
+    [is_uploaded] => 1
+    [target] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906c06a444937.58245922.pdf
+)
+
+[2025-11-01 23:22:34] Arquivo movido com sucesso Array
+(
+    [dst] => C:\xampp\htdocs\ged/public/storage/uploads/doc_6906c06a444937.58245922.pdf
+    [size] => 703
+)
+
+[2025-11-01 23:22:37] Hash/Páginas Array
+(
+    [hash] => e0a0fc039746982a7a32e4e3d9098820b4f489139202b344db0c821ec8c97ed7
+    [pages] => 1
+)
+
+[2025-11-01 23:22:37] Renomeado automaticamente (substituicao) Array
+(
+    [from] => - Página 3
+    [to] => -dSMBkI3A
+)
+
+[2025-11-01 23:22:37] UPDATE SQL Array
+(
+    [sql] => UPDATE documentos SET titulo = ?, descricao = ?, tipo_documento_id = ?, caminho_arquivo = ?, hash_arquivo = ?, quantidade_paginas = ?, assinado = 0, data_assinatura = NULL, assinado_por = NULL, data_atualizacao = NOW() WHERE id = ?
+    [params_count] => 7
+)
+
+[2025-11-01 23:22:37] UPDATE concluído Array
+(
+    [arquivo_substituido] => 1
+    [id] => 12
+)
+
+[2025-11-02 15:40:31] POST documentos_editar iniciado Array
+(
+    [documento_id] => 32
+    [user_id] => 1
+)
+
+[2025-11-02 15:40:31] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1022
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-02 15:40:31] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-02 15:40:37] POST documentos_editar iniciado Array
+(
+    [documento_id] => 32
+    [user_id] => 1
+)
+
+[2025-11-02 15:40:37] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1206
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-02 15:40:37] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-10 21:12:20] POST documentos_editar iniciado Array
+(
+    [documento_id] => 27
+    [user_id] => 1
+)
+
+[2025-11-10 21:12:20] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 982
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-10 21:12:20] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 16:47:28] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 16:47:28] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1171
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 16:47:28] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 16:48:00] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 16:48:00] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1171
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 16:48:00] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 16:58:57] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-11 16:58:57] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1176
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 16:58:57] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 16:58:59] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-11 16:58:59] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1176
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 16:58:59] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:06:48] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-11 17:06:48] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1176
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:06:48] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:08:15] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-11 17:08:15] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1063
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:08:15] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:08:20] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-11 17:08:20] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1063
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:08:20] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:08:23] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-11 17:08:23] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1063
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:08:23] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:12:29] POST documentos_editar iniciado Array
+(
+    [documento_id] => 33
+    [user_id] => 1
+)
+
+[2025-11-11 17:12:29] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1063
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:12:29] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:12:53] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:12:53] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1171
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:12:53] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:12:59] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:12:59] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1172
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:12:59] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:29:48] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-11 17:29:48] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1176
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:29:48] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:35:24] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:35:24] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1277
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:35:24] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:35:27] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:35:27] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1168
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:35:27] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:39:45] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:39:45] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1277
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:39:45] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 17:39:47] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 17:39:47] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1168
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 17:39:47] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 18:30:04] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 18:30:04] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1168
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 18:30:04] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 18:31:07] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 18:31:07] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1277
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 18:31:08] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 19:11:24] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 19:11:24] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1168
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 19:11:24] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 19:11:24] UPDATE concluÃ­do Array
+(
+    [arquivo_substituido] => 
+    [id] => 12
+)
+
+[2025-11-11 19:11:39] POST documentos_editar iniciado Array
+(
+    [documento_id] => 12
+    [user_id] => 1
+)
+
+[2025-11-11 19:11:39] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 988
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 19:11:39] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 19:11:39] UPDATE concluÃ­do Array
+(
+    [arquivo_substituido] => 
+    [id] => 12
+)
+
+[2025-11-11 22:35:48] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-11 22:35:48] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 972
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-11 22:35:49] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-11 22:35:49] UPDATE concluÃ­do Array
+(
+    [arquivo_substituido] => 
+    [id] => 39
+)
+
+[2025-11-12 12:13:14] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-12 12:13:14] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1081
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-12 12:13:14] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+
+[2025-11-12 13:46:49] POST documentos_editar iniciado Array
+(
+    [documento_id] => 39
+    [user_id] => 1
+)
+
+[2025-11-12 13:46:49] CONTENT_LENGTH/post_max_size Array
+(
+    [content_length] => 1081
+    [post_max_size] => 40M
+    [bytes] => 41943040
+)
+
+[2025-11-12 13:46:49] FILES[arquivo] recebido Array
+(
+    [name] => 
+    [full_path] => 
+    [type] => 
+    [tmp_name] => 
+    [error] => 4
+    [size] => 0
+)
+

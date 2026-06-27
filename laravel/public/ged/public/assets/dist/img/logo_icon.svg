@@ -1,0 +1,27 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f9ff;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Document Icon -->
+  <path d="M15 5 L35 5 C37 5 38 6 38 8 L45 15 C47 17 47 18 47 20 L47 50 C47 52 46 55 43 55 L15 55 C13 55 10 52 10 50 L10 10 C10 8 13 5 15 5 Z" 
+        fill="url(#iconGradient)" 
+        stroke="rgba(255,255,255,0.3)" 
+        stroke-width="2"/>
+  
+  <!-- Folded Corner -->
+  <path d="M35 5 L35 13 C35 15 37 15 40 15 L45 15" 
+        fill="none" 
+        stroke="rgba(255,255,255,0.5)" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  
+  <!-- Document Lines -->
+  <line x1="18" y1="25" x2="40" y2="25" stroke="rgba(59,130,246,0.8)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="18" y1="32" x2="37" y2="32" stroke="rgba(96,165,250,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="18" y1="39" x2="40" y2="39" stroke="rgba(96,165,250,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="18" y1="46" x2="32" y2="46" stroke="rgba(147,197,253,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,63 @@
+# ========================================
+# ENFAS GED - Configuração Apache
+# ========================================
+
+# Segurança: Bloquear acesso direto a arquivos sensíveis
+<FilesMatch "\.(sql|md|json|lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ========================================
+# VARIÁVEIS DE AMBIENTE SMTP
+# ========================================
+# IMPORTANTE: Configure aqui suas credenciais SMTP
+# Remova o comentário (#) das linhas abaixo e preencha
+
+# Gmail (para testes)
+# SetEnv GED_SMTP_HOST "smtp.gmail.com"
+# SetEnv GED_SMTP_PORT "587"
+# SetEnv GED_SMTP_USER "seu-email@gmail.com"
+# SetEnv GED_SMTP_PASS "sua-senha-app-aqui"
+# SetEnv GED_SMTP_SECURE "tls"
+# SetEnv GED_MAIL_FROM "seu-email@gmail.com"
+# SetEnv GED_MAIL_FROM_NAME "ENFAS GED"
+
+# Servidor SMTP Próprio (ENFAS)
+# SetEnv GED_SMTP_HOST "mail.ged.enfas.com.br"
+# SetEnv GED_SMTP_PORT "587"
+# SetEnv GED_SMTP_USER "noreply@ged.enfas.com.br"
+# SetEnv GED_SMTP_PASS "SENHA_SEGURA_AQUI"
+# SetEnv GED_SMTP_SECURE "tls"
+# SetEnv GED_MAIL_FROM "noreply@ged.enfas.com.br"
+# SetEnv GED_MAIL_FROM_NAME "ENFAS GED"
+
+# ========================================
+# OUTRAS VARIÁVEIS DE AMBIENTE
+# ========================================
+# SetEnv APP_ENV "production"
+# SetEnv GED_DB_HOST "localhost"
+# SetEnv GED_DB_NAME "GED"
+# SetEnv GED_DB_USER "root"
+# SetEnv GED_DB_PASS ""
+
+# ========================================
+# REWRITE RULES
+# ========================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Forçar HTTPS (descomente para produção)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ========================================
+# PHP SETTINGS
+# ========================================
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 100M
+    php_value post_max_size 100M
+    php_value max_execution_time 300
+    php_value memory_limit 256M
+</IfModule>

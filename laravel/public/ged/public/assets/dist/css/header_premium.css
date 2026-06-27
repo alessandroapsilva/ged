@@ -1,0 +1,6 @@
+/* Header Premium - evita 404 e permite customizações futuras */
+.navbar.navbar-light {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.navbar .nav-link { font-weight: 500; }
+

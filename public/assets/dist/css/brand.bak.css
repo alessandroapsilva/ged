@@ -1,0 +1,105 @@
+/* Tema ENFAS GED estilo eDok (dark + laranja) */
+:root{
+  --brand: #2563eb;          /* primário (azul) */
+  --brand-accent: #3b82f6;   /* acento */
+  --dark-00: #0f172a;        /* quase preto */
+  --dark-10: #1f2937;        /* fundo geral */
+  --dark-20: #2b3f4c;        /* cartões */
+  --dark-30: #344556;        /* bordas */
+  --light-90: #f9fafb;       /* texto claro */
+}
+.navbar-white.navbar-light{ border-bottom:1px solid #293645; }
+.dark-mode .navbar-white.navbar-light{ background: var(--dark-10); border-color:#36485a; }
+.navbar .nav-link{color:#c7d2da}
+.navbar .nav-link:hover{color:var(--brand)}
+.badge-info{background-color:#17a2b8}
+.btn-primary{background-color:var(--brand);border-color:var(--brand)}
+.btn-outline-primary{color:var(--brand);border-color:var(--brand)}
+.btn-outline-primary:hover{background:var(--brand);color:#fff}
+.dropdown-menu{border-radius:10px;border-color:#1e2a36;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.dropdown-item:hover{background:#f5faff}
+.card-primary.card-outline{border-top:3px solid var(--brand)}
+/* Pesquisa central responsiva */
+.form-control-navbar:focus{border-color:var(--brand);box-shadow:0 0 0 .2rem rgba(37,99,235,.25)}
+/* Badge no navbar */
+.navbar-badge{font-weight:600}
+/* Tema escuro pequeno ajuste */
+.dark-mode .dropdown-menu{background:#1f2937;border-color:#374151}
+.dark-mode .dropdown-item{color:#e5e7eb}
+.dark-mode .dropdown-item:hover{background:#111827}
+
+/* Cards e tabelas estilo eDok */
+.dark-mode .content-wrapper{ background: var(--dark-10); }
+.dark-mode .card{ background: var(--dark-20); color:#dde6ee; border-color:#2a3a46; }
+.dark-mode .table{ color:#d8e1ea; }
+.dark-mode .table thead th{ border-bottom-color:#31495b; color:#e6edf4; }
+.dark-mode .table td, .dark-mode .table th{ border-top-color:#2a3a46; }
+.dark-mode .badge-info{ background: #3b82f6; }
+.dark-mode .table-hover tbody tr:hover{ background:#2f4350; }
+
+/* Ações em documentos (ícones tipo eDok) */
+.action-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:32px; height:32px; margin:0 3px; border-radius:6px;
+  background:#2a3a46; color:#cbd5e1 !important; border:1px solid #324758;
+  transition:all .15s ease-in-out; text-decoration:none !important;
+}
+.action-icon:hover{ transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,.25); color:#fff !important; border-color:#3a5368; }
+.action-icon.text-success{ color:#22c55e !important; }
+.action-icon.text-primary{ color:#60a5fa !important; }
+.action-icon.text-warning{ color:#f59e0b !important; }
+.action-icon.text-info{ color:#38bdf8 !important; }
+.action-icon.text-secondary{ color:#cbd5e1 !important; }
+.action-icon.text-danger{ color:#ef4444 !important; background:transparent; border:2px solid #ef4444; }
+.action-icon.text-danger:hover{ background:#7f1d1d; color:#fee2e2 !important; }
+
+/* Barra de ações (selecionados) */
+#card-footer-actions{ background:#223240; border-top:1px solid #31495b; position: sticky; bottom: 0; z-index: 5; }
+#card-footer-actions .btn{ font-weight:700; border-radius:6px; padding:6px 14px; }
+#btn-combinar{ background:#22c55e; border-color:#16a34a; }
+#btn-mover-lote{ background:#f59e0b; color:#1f2937; border-color:#d97706; }
+#btn-apagar-lote{ background:#ef4444; border-color:#dc2626; }
+
+/* Badge de extensão */
+.ext-badge{ display:inline-block; min-width:34px; text-align:center; padding:2px 6px; border-radius:4px; font-weight:700; font-size:11px; margin-right:6px; }
+.ext-badge.pdf{ background:#b91c1c; color:#fff; }
+.ext-badge.doc,.ext-badge.docx{ background:#1d4ed8; color:#fff; }
+.ext-badge.xls,.ext-badge.xlsx{ background:#047857; color:#fff; }
+.ext-badge.jpg,.ext-badge.jpeg,.ext-badge.png{ background:#1f2937; color:#e5e7eb; }
+.ext-badge.outro{ background:#374151; color:#e5e7eb; }
+
+/* Sidebar */
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.dark-mode .nav-sidebar>.nav-item>.nav-link.active{
+  background: linear-gradient(135deg, var(--brand), var(--brand-accent));
+  color:#fff;
+}
+.dark-mode .nav-sidebar .nav-link{ color:#c8d3dc; }
+.dark-mode .nav-sidebar .nav-link:hover{ color:#fff; }
+
+/* Barra fixa ao final da lista (eDok) */
+#card-footer-actions{ position: sticky; bottom: 0; z-index: 5; }
+
+/* Correções de layout: sidebar e altura total */
+html, body, .wrapper { height: 100%; }
+.main-sidebar { min-height: 100vh; overflow-y: auto; }
+.content-wrapper { min-height: calc(100vh - 57px); }
+
+/* Evita lâmpada duplicada no topo (mantemos apenas theme-switch do footer) */
+#btn-toggle-theme { display: none !important; }
+
+/* Documentos (estilo eDok) */
+.doc-toolbar .btn { border-radius: 6px; font-weight:600; }
+.doc-toolbar .btn i { margin-right:6px; }
+.doc-toolbar .view-toggle .btn { padding:6px 10px; }
+.doc-toolbar .view-toggle .btn.active { background: var(--brand); color:#fff; border-color: var(--brand); }
+\.doc-chips, .d-flex.align-items-center.flex-wrap .badge { font-weight:600; padding:6px 10px; border-radius:999px; }
+.doc-table .doc-row td { vertical-align: middle; }
+.doc-table .title-cell strong { font-weight:700; }
+.doc-table .title-cell small { color:#93a4b3; }
+.doc-table .type-cell { color:#cbd5e1; }
+.doc-table .updated-cell { color:#cbd5e1; font-size: .9rem; }
+.doc-breadcrumb { font-size:.95rem; }
+.doc-count { color:#9fb3c8; font-size:.9rem; }
+
+

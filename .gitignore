@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+config.php
+uploads/
+arquivos/
+vendor/
+.env
+*.pdf
+*.docx
+*.zip
+*.rar
+*.jpg
+*.png

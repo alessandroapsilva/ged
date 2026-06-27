@@ -1,0 +1,9 @@
+[07-Feb-2026 18:25:05 America/Sao_Paulo] PHP Warning:  Constant APP_VERSION already defined in C:\xampp\htdocs\ged\core\init_professional.php on line 45
+[07-Feb-2026 18:25:07 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Argument #1 ($dsn) must be a valid data source name in C:\xampp\htdocs\ged\helpers\DatabaseManager.php:47
+Stack trace:
+#0 C:\xampp\htdocs\ged\helpers\DatabaseManager.php(47): PDO->__construct('root', '', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\ged\helpers\DatabaseManager.php(18): DatabaseManager->connect()
+#2 C:\xampp\htdocs\ged\helpers\DatabaseManager.php(23): DatabaseManager->__construct()
+#3 C:\xampp\htdocs\ged\public\digitalizar_moderno.php(21): DatabaseManager::getInstance()
+#4 {main}
+  thrown in C:\xampp\htdocs\ged\helpers\DatabaseManager.php on line 47

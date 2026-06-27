@@ -1,0 +1,1024 @@
+<?php
+require_once '../core/init.php';
+
+if (!isset($_SESSION['user_id'])) { 
+    header('Location: ../login.php'); 
+    exit(); 
+}
+
+try {
+    $stmt = $pdo->query("SELECT id, nome FROM tipos_documento ORDER BY nome ASC");
+    $tipos_documento = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $tipos_documento = [];
+}
+
+$baseUrl = defined('BASE_URL') ? BASE_URL : '/ged';
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitalização - GED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Dynamsoft WebTWAIN SDK -->
+    <script src="<?= $baseUrl ?>/public/js/dynamsoft.webtwain.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f3f4f6;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.75rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .content {
+            padding: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .card-header {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group:last-child { margin-bottom: 0; }
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.625rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.9375rem;
+            font-family: inherit;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        .btn-primary {
+            width: 100%;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 0.875rem;
+            font-size: 1rem;
+        }
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border-left: 4px solid;
+        }
+        .alert-info {
+            background: #dbeafe;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+        .alert-warning {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #92400e;
+        }
+        .preview {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .preview i {
+            font-size: 4rem;
+            color: #d1d5db;
+            margin-bottom: 1rem;
+        }
+        .text-center { text-align: center; }
+        .text-muted { color: #6b7280; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-scanner"></i> Digitalização</h1>
+            <a href="index.php" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="alert alert-info">
+                <strong>📱 Captura de Documentos</strong><br>
+                Você pode fotografar documentos com a câmera do seu dispositivo ou fazer upload de um PDF já digitalizado.
+            </div>
+
+            <div class="grid">
+                <!-- Left Panel -->
+                <div>
+                    <form id="form-scan">
+                        <!-- Upload Manual -->
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-file-pdf"></i> Fazer Upload
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Arquivo PDF *</label>
+                                    <input type="file" id="arquivo" accept="application/pdf" required>
+                                    <small style="color: #6b7280; display: block; margin-top: 0.25rem;">
+                                        Máximo: 50 MB
+                                    </small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Título do Documento *</label>
+                                    <input type="text" id="titulo" placeholder="Ex: Nota Fiscal 2025" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tipo de Documento</label>
+                                    <select id="tipo_documento_id">
+                                        <option value="">Selecione...</option>
+                                        <?php foreach ($tipos_documento as $t): ?>
+                                            <option value="<?= htmlspecialchars($t['id']) ?>">
+                                                <?= htmlspecialchars($t['nome']) ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-group">
+                                        <input type="checkbox" id="chk-ocr">
+                                        <span>Executar OCR (extrair texto)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div style="margin-top: 1rem;">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-cloud-upload-alt"></i> Enviar Documento
+                            </button>
+                        </div>
+
+                        <!-- Scanner -->
+                        <div class="card" style="margin-top: 1rem;">
+                            <div class="card-header">
+                                <i class="fas fa-scanner"></i> Scanner
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <button type="button" id="btn-scanner" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                                        <i class="fas fa-camera"></i> Usar Câmera
+                                    </button>
+                                </div>
+                                <div id="scanner-container" style="display: none; gap: 1rem;">
+                                    <video id="video-scanner" style="width: 100%; border-radius: 6px; background: black; display: none;"></video>
+                                    <canvas id="canvas-scanner" style="display: none;"></canvas>
+                                    <img id="photo-preview" style="width: 100%; border-radius: 6px; display: none;">
+                                    <div id="scanner-buttons" style="display: flex; gap: 0.5rem;">
+                                        <button type="button" id="btn-capturar" class="btn btn-primary" style="flex: 1;">
+                                            <i class="fas fa-camera"></i> Capturar
+                                        </button>
+                                        <button type="button" id="btn-fechar-camera" class="btn btn-secondary" style="flex: 1;">
+                                            <i class="fas fa-times"></i> Fechar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="alert alert-info" style="margin-top: 1rem;">
+                            <strong>💡 Dica:</strong> Use a câmera para fotografar documentos ou carregue um PDF já digitalizado.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Panel - Preview -->
+                <div>
+                    <div class="preview" id="preview">
+                        <i class="fas fa-file-pdf"></i>
+                        <p class="text-muted">Nenhum arquivo selecionado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('arquivo');
+        const preview = document.getElementById('preview');
+        const form = document.getElementById('form-scan');
+        const btnScanner = document.getElementById('btn-scanner');
+        const scannerContainer = document.getElementById('scanner-container');
+        const videoScanner = document.getElementById('video-scanner');
+        const canvasScanner = document.getElementById('canvas-scanner');
+        const photoPreview = document.getElementById('photo-preview');
+        const btnCapturar = document.getElementById('btn-capturar');
+        const btnFecharCamera = document.getElementById('btn-fechar-camera');
+        const scannerButtons = document.getElementById('scanner-buttons');
+
+        let mediaStream = null;
+        let fotoCapturada = null;
+
+        // Abrir câmera
+        btnScanner.addEventListener('click', async function() {
+            try {
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    alert('Câmera não disponível neste navegador');
+                    return;
+                }
+
+                mediaStream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: 'environment', width: { ideal: 1920 } } 
+                });
+
+                videoScanner.srcObject = mediaStream;
+                videoScanner.style.display = 'block';
+                photoPreview.style.display = 'none';
+                scannerContainer.style.display = 'flex';
+                btnScanner.style.display = 'none';
+                btnCapturar.style.display = 'block';
+
+                videoScanner.play();
+            } catch (error) {
+                console.error('Erro ao acessar câmera:', error);
+                alert('Permissão de câmera negada ou não disponível');
+            }
+        });
+
+        // Capturar foto
+        btnCapturar.addEventListener('click', function() {
+            canvasScanner.width = videoScanner.videoWidth;
+            canvasScanner.height = videoScanner.videoHeight;
+            
+            const ctx = canvasScanner.getContext('2d');
+            ctx.drawImage(videoScanner, 0, 0);
+            
+            fotoCapturada = canvasScanner.toDataURL('image/jpeg', 0.9);
+            photoPreview.src = fotoCapturada;
+            photoPreview.style.display = 'block';
+            videoScanner.style.display = 'none';
+            btnCapturar.innerHTML = '<i class="fas fa-check"></i> Usar Esta Foto';
+            
+            // Mudar função do botão para usar a foto
+            btnCapturar.onclick = function() {
+                fecharCamera();
+                converterFotoParaPDF(fotoCapturada);
+            };
+        });
+
+        // Fechar câmera
+        btnFecharCamera.addEventListener('click', function() {
+            fecharCamera();
+        });
+
+        function fecharCamera() {
+            if (mediaStream) {
+                mediaStream.getTracks().forEach(track => track.stop());
+                mediaStream = null;
+            }
+            scannerContainer.style.display = 'none';
+            btnScanner.style.display = 'block';
+            photoPreview.style.display = 'none';
+            videoScanner.style.display = 'none';
+            btnCapturar.innerHTML = '<i class="fas fa-camera"></i> Capturar';
+            btnCapturar.onclick = null;
+            fotoCapturada = null;
+        }
+
+        // Converter foto para PDF
+        function converterFotoParaPDF(imagemBase64) {
+            // Carregar biblioteca jsPDF
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+            document.head.appendChild(script);
+
+            script.onload = function() {
+                // Criar imagem a partir do base64
+                const img = new Image();
+                img.src = imagemBase64;
+                
+                img.onload = function() {
+                    // Criar elemento para conversão
+                    const element = document.createElement('div');
+                    element.appendChild(img);
+                    
+                    const opt = {
+                        margin: 5,
+                        filename: 'documento_' + new Date().getTime() + '.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+                    };
+
+                    html2pdf().set(opt).from(element).save();
+                    
+                    // Mostrar sucesso
+                    alert('PDF gerado! O arquivo foi baixado. Você pode carregá-lo agora.');
+                };
+            };
+        }
+
+        // Preview do arquivo
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            
+            if (!file) {
+                preview.innerHTML = '<i class="fas fa-file-pdf"></i><p class="text-muted">Nenhum arquivo selecionado</p>';
+                return;
+            }
+
+            // Validar tipo
+            if (file.type !== 'application/pdf') {
+                alert('Por favor, selecione um arquivo PDF');
+                fileInput.value = '';
+                preview.innerHTML = '<i class="fas fa-file-pdf"></i><p class="text-muted">Apenas PDF é aceito</p>';
+                return;
+            }
+
+            // Validar tamanho (50MB)
+            if (file.size > 50 * 1024 * 1024) {
+                alert('Arquivo muito grande (máximo 50 MB)');
+                fileInput.value = '';
+                preview.innerHTML = '<i class="fas fa-file-pdf"></i><p class="text-muted">Arquivo muito grande</p>';
+                return;
+            }
+
+            // Mostrar preview
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                preview.innerHTML = `
+                    <div style="text-align: center; width: 100%;">
+                        <i class="fas fa-check-circle" style="color: #10b981; font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p><strong>${file.name}</strong></p>
+                        <p class="text-muted">${(file.size / 1024 / 1024).toFixed(2)} MB</p>
+                    </div>
+                `;
+            };
+            reader.readAsArrayBuffer(file);
+        });
+
+        // Submit do formulário
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Selecione um arquivo');
+                return;
+            }
+
+            const titulo = document.getElementById('titulo').value.trim();
+            if (!titulo) {
+                alert('Preencha o título');
+                return;
+            }
+
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+            try {
+                const formData = new FormData();
+                formData.append('documento_digitalizado', file);
+                formData.append('titulo', titulo);
+                formData.append('tipo_documento_id', document.getElementById('tipo_documento_id').value);
+                formData.append('captura_modo', 'upload_manual');
+                formData.append('conteudo_ocr', document.getElementById('chk-ocr').checked ? '1' : '0');
+
+                const response = await fetch('digitalizar_processar.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const text = await response.text();
+                console.log('Resposta:', text);
+
+                try {
+                    const data = JSON.parse(text);
+                    if (data.sucesso) {
+                        alert('✅ Documento salvo com sucesso!');
+                        window.location.href = 'index.php';
+                    } else {
+                        alert('❌ Erro: ' + data.mensagem);
+                    }
+                } catch (e) {
+                    alert('Erro ao processar resposta: ' + text);
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao enviar: ' + error.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Enviar Documento';
+            }
+        });
+
+        console.log('✅ Sistema de digitalização carregado (Câmera + Upload)');
+    </script>
+</body>
+</html>
+</head>
+<body>
+
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --green: #10b981;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            padding: 0;
+            margin: 0;
+        }
+
+        .digitalizar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+.digitalizar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.digitalizar-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.digitalizar-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1.5rem;
+}
+
+/* Control Cards */
+.scan-controls-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.card-section {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.card-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.field-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.field-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    background: var(--white);
+}
+
+.btn-scan {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-scan:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-scan:disabled {
+    background: var(--gray-400);
+    cursor: not-allowed;
+}
+
+.preview-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-body {
+    flex: 1;
+    background: #f3f4f6;
+    position: relative;
+    overflow: hidden;
+}
+
+#dwtcontrolContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: var(--gray-200);
+    color: var(--gray-700);
+}
+
+.btn-success {
+    background: var(--green);
+    color: white;
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+    .digitalizar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+
+    <div class="digitalizar-container">
+        <div class="digitalizar-header">
+            <h1 class="digitalizar-title">
+                <i class="fas fa-scanner"></i> Digitalização de Documentos
+            </h1>
+            <a href="index.php" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+
+        <div class="digitalizar-grid">
+            <!-- Left Panel: Controls -->
+            <div>
+                <form id="form-digitalizacao">
+                    
+                    <!-- Scanner Settings -->
+                    <div class="scan-controls-card">
+                        <div class="card-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i> Scanner
+                            </h2>
+                            
+                            <div class="form-field">
+                                <label class="field-label">Dispositivo *</label>
+                                <select id="source" class="field-input">
+                                    <option value="">Carregando scanners...</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="field-label">Resolução (DPI)</label>
+                                <input type="number" id="dpi" class="field-input" value="200" min="72" max="600">
+                            </div>
+
+                            <div class="form-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="chk-show-ui">
+                                    Mostrar interface do scanner
+                                </label>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="chk-adf" checked>
+                                    Usar alimentador (ADF)
+                                </label>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="chk-duplex">
+                                    Duplex (frente e verso)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <button type="button" id="btn-scan" class="btn btn-primary" disabled>
+                                <i class="fas fa-print"></i> Digitalizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Document Data -->
+                    <div class="scan-controls-card" style="margin-top: 1.5rem;">
+                        <div class="card-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-file-alt"></i> Documento
+                            </h2>
+
+                            <div class="form-field">
+                                <label class="field-label">Título *</label>
+                                <input type="text" id="titulo" class="field-input" required placeholder="Ex: Nota Fiscal">
+                            </div>
+
+                            <div class="form-field">
+                                <label class="field-label">Tipo</label>
+                                <select id="tipo_documento_id" class="field-input">
+                                    <option value="">Selecione...</option>
+                                    <?php foreach ($tipos_documento as $t): ?>
+                                        <option value="<?= htmlspecialchars($t['id']) ?>">
+                                            <?= htmlspecialchars($t['nome']) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="chk-ocr">
+                                    Executar OCR
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-section">
+                            <button type="button" id="btn-save" class="btn btn-success" disabled>
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Right Panel: Preview -->
+            <div>
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <h3 class="section-title" style="margin: 0;">
+                            <i class="fas fa-image"></i> Visualização
+                        </h3>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-sm btn-secondary" id="btn-rotate-left" disabled>
+                                <i class="fas fa-undo"></i>
+                            </button>
+                            <button class="btn btn-sm btn-secondary" id="btn-rotate-right" disabled>
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" id="btn-clear" disabled>
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preview-body">
+                        <div id="dwtcontrolContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var DWObject;
+
+        // Configurar Dynamsoft ANTES de inicializar
+        if (typeof Dynamsoft !== 'undefined' && Dynamsoft.DWT) {
+            Dynamsoft.DWT.ProductKey = 't0200EQYAAIqF7ULlzeXyetmQqDjsghHfezbNM7OaVUgjn1UnuM8+Nxogctuj7hdPJZwiB3wZAosIajHHOZyvtawQdgjUnZded04Z4NT9nVHc18kBTnnkBHz8dOm0VRx3DJAdmNNkn+vwBVgCaS0XYDFn750hA6QF6AagW2tgC6juIiRfyuQdv785/e9Aa04Z4NT9nWWB9HFygFMeOUOBTA5qC7vdUoGwvDkZIC1AV4E4L1EpEFwBaQG6CiyXKpYMwOSMs9b7N7tqPpU=';
+            Dynamsoft.DWT.ResourcesPath = 'js/Resources';
+            Dynamsoft.DWT.Containers = [
+                { ContainerId: 'dwtcontrolContainer', Width: '100%', Height: '100%' }
+            ];
+            Dynamsoft.DWT.AutoLoad = true;
+            Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+            
+            console.log('✅ Dynamsoft WebTWAIN configurado');
+        } else {
+            console.error('❌ Dynamsoft não carregou corretamente');
+        }
+
+        function Dynamsoft_OnReady() {
+            console.log('✅ Dynamsoft pronto');
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+            
+            if (DWObject) {
+                document.getElementById('btn-scan').disabled = false;
+                
+                var sourceCount = DWObject.SourceCount;
+                var sourceSelect = document.getElementById('source');
+                sourceSelect.innerHTML = '';
+                
+                if (sourceCount === 0) {
+                    sourceSelect.innerHTML = '<option value="">Nenhum scanner detectado</option>';
+                } else {
+                    for (var i = 0; i < sourceCount; i++) {
+                        var option = document.createElement('option');
+                        option.value = i;
+                        option.textContent = DWObject.GetSourceNameItems(i);
+                        sourceSelect.appendChild(option);
+                    }
+                }
+            }
+        }
+
+        // Botão Digitalizar
+        document.getElementById('btn-scan').addEventListener('click', function() {
+            if (!DWObject) {
+                alert('Componente não pronto');
+                return;
+            }
+
+            var sourceIndex = document.getElementById('source').value;
+            if (!sourceIndex) {
+                alert('Selecione um scanner');
+                return;
+            }
+
+            try {
+                DWObject.SelectSourceByIndex(sourceIndex);
+                DWObject.OpenSource();
+                
+                DWObject.IfShowUI = document.getElementById('chk-show-ui').checked;
+                DWObject.Resolution = parseInt(document.getElementById('dpi').value);
+                DWObject.IfFeederEnabled = document.getElementById('chk-adf').checked;
+                DWObject.IfDuplexEnabled = document.getElementById('chk-duplex').checked;
+
+                DWObject.AcquireImage(
+                    { IfCloseSourceAfterAcquire: true },
+                    function() {
+                        console.log('✅ Scan iniciado');
+                        document.getElementById('btn-save').disabled = false;
+                        document.getElementById('btn-rotate-left').disabled = false;
+                        document.getElementById('btn-rotate-right').disabled = false;
+                        document.getElementById('btn-clear').disabled = false;
+                    },
+                    function(errorCode, errorString) {
+                        alert('Erro: ' + errorString);
+                    }
+                );
+            } catch (e) {
+                alert('Erro: ' + e.message);
+            }
+        });
+
+        // Botão Salvar
+        document.getElementById('btn-save').addEventListener('click', function() {
+            if (!DWObject || DWObject.HowManyImagesInBuffer === 0) {
+                alert('Nenhuma imagem para salvar');
+                return;
+            }
+
+            var titulo = document.getElementById('titulo').value.trim();
+            if (!titulo) {
+                alert('Preencha o título');
+                return;
+            }
+
+            var tipoId = document.getElementById('tipo_documento_id').value;
+            
+            try {
+                this.disabled = true;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+                DWObject.ClearAllHTTPFormField();
+                DWObject.SetHTTPFormField('titulo', titulo);
+                if (tipoId) DWObject.SetHTTPFormField('tipo_documento_id', tipoId);
+                DWObject.SetHTTPFormField('captura_modo', 'scanner');
+                if (document.getElementById('chk-ocr').checked) {
+                    DWObject.SetHTTPFormField('conteudo_ocr', '1');
+                }
+
+                var strHTTPServer = location.hostname;
+                var CurrentPath = location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
+                var strActionPage = CurrentPath + 'digitalizar_processar.php';
+
+                DWObject.HTTPUploadAllThroughPostAsPDF(
+                    strHTTPServer,
+                    strActionPage,
+                    'documento_digitalizado.pdf',
+                    function() {
+                        alert('✅ Sucesso!');
+                        window.location.href = 'index.php';
+                    },
+                    function(errorCode, errorString, response) {
+                        alert('Erro: ' + errorString);
+                        document.getElementById('btn-save').disabled = false;
+                        document.getElementById('btn-save').innerHTML = '<i class="fas fa-save"></i> Salvar';
+                    }
+                );
+            } catch (e) {
+                alert('Erro: ' + e.message);
+                document.getElementById('btn-save').disabled = false;
+                document.getElementById('btn-save').innerHTML = '<i class="fas fa-save"></i> Salvar';
+            }
+        });
+
+        // Rotação
+        document.getElementById('btn-rotate-left').addEventListener('click', function() {
+            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+                DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
+            }
+        });
+
+        document.getElementById('btn-rotate-right').addEventListener('click', function() {
+            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+                DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
+            }
+        });
+
+        // Limpar
+        document.getElementById('btn-clear').addEventListener('click', function() {
+            if (DWObject && confirm('Limpar todas as imagens?')) {
+                DWObject.RemoveAllImages();
+                document.getElementById('btn-save').disabled = true;
+                document.getElementById('btn-rotate-left').disabled = true;
+                document.getElementById('btn-rotate-right').disabled = true;
+                document.getElementById('btn-clear').disabled = true;
+            }
+        });
+
+        console.log('✅ Script de digitalização carregado');
+    </script>
+</body>
+</html>

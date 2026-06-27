@@ -1,0 +1,202 @@
+/* public/assets/dist/css/ged_styles.css */
+
+:root {
+    --brand-primary: #007bff; /* fallback */
+    --brand-accent: #28a745;
+}
+
+/* Permite ajustar as cores principais do tema de forma simples
+   - Para customizações dinâmicas por PHP, podemos imprimir um <style> inline com os valores de BRAND_* */
+
+body.dark-mode {
+    --brand-primary: #3a8bff;
+    --brand-accent: #2ecc71;
+}
+
+/* General Style Improvements */
+.content-wrapper {
+    background-color: #f4f6f9;
+}
+
+.btn-success {
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+}
+
+/* View Toggler */
+.view-toggler {
+    margin-left: 1rem;
+}
+
+/* Main container for items */
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.items-container.list-view {
+    display: block;
+    padding: 0;
+}
+
+/* Item Styling (Grid View) */
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.item .item-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--brand-primary); /* Default folder/file color */
+}
+
+.item .item-icon.fa-folder {
+    color: #ffc107; /* Folder color */
+}
+
+.item .item-name {
+    font-weight: 600;
+    color: #343a40;
+    word-break: break-word;
+}
+
+.item .item-details {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Item Styling (List View) */
+.items-container.list-view .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.items-container.list-view .item:hover {
+    background-color: #f8f9fa;
+    transform: none;
+}
+
+.items-container.list-view .item .item-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+.items-container.list-view .item .item-info {
+    flex-grow: 1;
+}
+
+.items-container.list-view .item .item-actions {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.items-container.list-view .item:hover .item-actions {
+    opacity: 1;
+}
+
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.empty-state-icon {
+    font-size: 6rem;
+    color: #ced4da;
+    margin-bottom: 1.5rem;
+}
+
+/* Context Menu */
+.context-menu {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    display: none;
+}
+
+.context-menu-item {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+}
+
+.context-menu-item i {
+    margin-right: 1rem;
+    width: 1.25em;
+    text-align: center;
+}
+
+.context-menu-item:hover {
+    background-color: #f8f9fa;
+    color: #16181b;
+}
+
+.context-menu-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+/* Sidebar Styles */
+.main-sidebar .brand-link {
+    background-color: #ffffff;
+    color: #343a40 !important;
+    height: calc(3.5rem + 1px);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.main-sidebar .brand-link img {
+    max-height: 45px;
+    width: auto;
+}

@@ -1,0 +1,304 @@
+📌 LINKS DE ACESSO RÁPIDO - SISTEMA GED
+======================================
+
+🏠 DASHBOARD E SISTEMA
+─────────────────────
+
+Status de Restauração (Visual)
+http://localhost/ged/index.html
+└─ Dashboard visual com status de restauração
+
+Dashboard Principal (Sistema)
+http://localhost/ged/public/painel_produtividade_moderno.php
+└─ Dashboard com estatísticas e gráficos
+
+Dashboard Administrativo
+http://localhost/ged/public/admin_sistema_checklist.php
+└─ Checklist do sistema (admin)
+
+🧪 TESTE E DIAGNÓSTICO
+─────────────────────
+
+Teste Rápido (⏱️ 2 min)
+http://localhost/ged/public/teste_rapido.php
+└─ Verificação rápida de componentes
+
+Verificação do Sistema
+http://localhost/ged/public/verificacao.php
+└─ Menu com todas as páginas do sistema
+
+Teste de Integridade
+http://localhost/ged/public/teste_integridade.php
+└─ Teste completo de arquivos e banco
+
+Relatório do Sistema
+http://localhost/ged/public/relatorio_sistema.php
+└─ Relatório detalhado com opção de impressão
+
+Status do Sistema
+http://localhost/ged/public/status.php
+└─ Cards de status operacional
+
+📄 DOCUMENTAÇÃO
+──────────────
+
+Guia Completo
+/GUIA_COMPLETO.md
+└─ Documentação detalhada de uso
+
+Registro de Alterações
+/REGISTRO_ALTERACOES.md
+└─ Histórico de todas as mudanças
+
+Status Atual
+/public/README_STATUS.md
+└─ Estado atual do sistema
+
+Resumo de Restauração
+/RESUMO_RESTAURACAO.txt
+└─ Este arquivo com links
+
+📋 GESTÃO DE DOCUMENTOS
+──────────────────────
+
+Listar Documentos
+http://localhost/ged/public/documentos.php
+└─ Lista completa de documentos
+
+Adicionar Documento
+http://localhost/ged/public/documentos_adicionar.php
+└─ Novo documento manualmente
+
+Editar Documento
+http://localhost/ged/public/documentos_editar.php
+└─ Alterar propriedades
+
+Visualizar Documento
+http://localhost/ged/public/documentos_ver.php
+└─ Ver documento completo
+
+Download de Documento
+http://localhost/ged/public/documentos_download.php
+└─ Baixar arquivo
+
+Propriedades
+http://localhost/ged/public/documentos_propriedades.php
+└─ Informações detalhadas
+
+Busca Simples
+http://localhost/ged/public/buscar.php
+└─ Busca rápida por título
+
+Busca Avançada
+http://localhost/ged/public/busca_avancada.php
+└─ Busca com múltiplos critérios
+
+📁 GESTÃO DE PASTAS
+───────────────────
+
+Árvore de Pastas
+http://localhost/ged/public/pastas_arvore.php
+└─ Visualizar estrutura de pastas
+
+Criar Pasta
+http://localhost/ged/public/pastas_criar.php
+└─ Nova pasta
+
+Renomear Pasta
+http://localhost/ged/public/pastas_renomear.php
+└─ Editar nome da pasta
+
+Propriedades da Pasta
+http://localhost/ged/public/pastas_propriedades.php
+└─ Informações e permissões
+
+📱 DIGITALIZAÇÃO
+────────────────
+
+Digitalizar (Dynamsoft TWAIN)
+http://localhost/ged/public/digitalizar_dynamsoft.php
+└─ Scanner TWAIN integrado ⭐ NOVO
+
+Digitalizar (Câmera)
+http://localhost/ged/public/digitalizar_moderno.php
+└─ Captura por câmera
+
+Upload de Arquivo
+http://localhost/ged/public/upload_processar.php
+└─ Processar upload
+
+⚙️ WORKFLOWS
+────────────
+
+Listar Workflows
+http://localhost/ged/public/workflows.php
+└─ Todos os workflows
+
+Criar Workflow
+http://localhost/ged/public/workflows_criar.php
+└─ Novo workflow
+
+Editar Workflow
+http://localhost/ged/public/admin_workflow_edit.php
+└─ Editar workflow existente
+
+🔔 NOTIFICAÇÕES
+────────────────
+
+Central de Notificações
+http://localhost/ged/public/notificacoes.php
+└─ Ver todas as notificações
+
+👤 USUÁRIO
+──────────
+
+Perfil do Usuário
+http://localhost/ged/public/perfil.php
+└─ Informações do usuário
+
+Editar Perfil
+http://localhost/ged/public/perfil_editar.php
+└─ Alterar dados pessoais
+
+Alterar Senha
+http://localhost/ged/public/perfil_alterar_senha.php
+└─ Mudar senha
+
+Logout
+http://localhost/ged/public/logout.php
+└─ Sair do sistema
+
+🛡️ ADMINISTRAÇÃO (Admin Only)
+────────────────────────────
+
+Usuários
+http://localhost/ged/public/usuarios_listar.php
+└─ Gestão de usuários
+
+Adicionar Usuário
+http://localhost/ged/public/usuarios_adicionar.php
+└─ Novo usuário
+
+Editar Usuário
+http://localhost/ged/public/usuarios_editar.php
+└─ Alterar dados do usuário
+
+Logs do Sistema
+http://localhost/ged/public/logs_sistema.php
+└─ Auditoria e logs
+
+Configurações de Email
+http://localhost/ged/public/admin_email_templates.php
+└─ Gerenciar templates
+
+Configurações de ICP
+http://localhost/ged/public/admin_icp_config.php
+└─ Configurações ICP
+
+Saúde do Acervo
+http://localhost/ged/public/admin_saude_acervo.php
+└─ Verificação de integridade
+
+📊 RELATÓRIOS
+──────────────
+
+Relatórios Avançados
+http://localhost/ged/public/relatorios_avancados.php
+└─ Gerar relatórios
+
+Vencimentos
+http://localhost/ged/public/relatorio_vencimentos.php
+└─ Relatório de vencimentos
+
+Assinaturas
+http://localhost/ged/public/assinaturas_relatorio.php
+└─ Relatório de assinaturas
+
+🔐 AUTENTICAÇÃO
+────────────────
+
+Login
+http://localhost/ged/public/login.php
+└─ Página de login
+
+Esqueci a Senha
+http://localhost/ged/public/esqueci_senha.php
+└─ Recuperar acesso
+
+Redefinir Senha
+http://localhost/ged/public/redefinir_senha.php
+└─ Página de reset
+
+2FA Setup
+http://localhost/ged/public/2fa_setup.php
+└─ Configurar autenticação dupla
+
+2FA Verify
+http://localhost/ged/public/2fa_verify.php
+└─ Verificar 2FA
+
+ℹ️ INFORMAÇÕES
+──────────────
+
+PHP Info
+http://localhost/ged/public/phpinfo.php
+└─ Informações de PHP
+
+Health Check
+http://localhost/ged/public/health_check.php
+└─ Status de saúde do sistema
+
+Debug Page
+http://localhost/ged/public/debug.php
+└─ Página de debug
+
+Sobre o Sistema
+http://localhost/ged/public/sobre.php
+└─ Informações sobre GED
+
+Termos de Uso
+http://localhost/ged/public/termos.php
+└─ Termos e condições
+
+Privacidade
+http://localhost/ged/public/privacidade.php
+└─ Política de privacidade
+
+📌 ATALHOS RECOMENDADOS
+─────────────────────
+
+Para Início Rápido:
+1. http://localhost/ged/index.html
+2. http://localhost/ged/public/teste_rapido.php
+3. http://localhost/ged/public/painel_produtividade_moderno.php
+
+Para Verificação Completa:
+1. http://localhost/ged/public/teste_integridade.php
+2. http://localhost/ged/public/relatorio_sistema.php
+3. http://localhost/ged/public/logs_sistema.php
+
+Para Suporte Técnico:
+1. http://localhost/ged/public/relatorio_sistema.php
+2. http://localhost/ged/public/teste_integridade.php
+3. http://localhost/ged/public/phpinfo.php
+4. http://localhost/ged/public/logs_sistema.php
+
+🎯 COMEÇAR
+──────────
+
+1. Acesse: http://localhost/ged/index.html
+   └─ Veja o status de restauração
+
+2. Teste: http://localhost/ged/public/teste_rapido.php
+   └─ Verifique se tudo funciona
+
+3. Use: http://localhost/ged/public/painel_produtividade_moderno.php
+   └─ Comece a trabalhar no sistema
+
+═══════════════════════════════════════════════════════════════════════
+
+Última atualização: <?php echo date('d/m/Y H:i:s'); ?>
+Status: ✅ SISTEMA OPERACIONAL
+Versão: 2.0 (Restaurado)
+
+═══════════════════════════════════════════════════════════════════════
